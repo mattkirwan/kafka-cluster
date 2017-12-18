@@ -20,7 +20,7 @@ public class Pipe {
 
         final StreamsBuilder builder = new StreamsBuilder();
 
-        builder.stream("streams-plaintext-input").to("streams-pipe-output");
+        builder.stream("streams-plaintext-input").to("streams-shared-output");
 
         final Topology topology = builder.build();
 
