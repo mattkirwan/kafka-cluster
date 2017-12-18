@@ -94,7 +94,7 @@ services:
     entrypoint: "tail -f /etc/hosts"
 
   app-java:
-    image: confluentinc/cp-kafka:latest
+    image: lksoia89/kafka-jdk-dev:0.1
     network_mode: host
     depends_on:
       - kafka-1
