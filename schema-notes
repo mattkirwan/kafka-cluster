@@ -1,0 +1,34 @@
+
+# Schemas / Topics
+
+## customer_eligible
+```
+{
+    "customer_id": 123,
+    "promo_id": 456
+}
+```
+
+```
+{
+    "comment": "Customer eligible for promotion",
+    "version": "1-0-0",
+    "type": "record",
+    "name": "eligible",
+    "namespace": "customer",
+    "fields": [
+        {
+            "name": "customer_id",
+            "type": "long"
+        },
+        {
+            "comment": "Internal promotion ID",
+            "name": "promo_id",
+            "type": "long"
+        }
+    ]
+}
+```
+
+
+`curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" -d '{"schema": "{\"comment\": \"Customer eligible for promotion\",\"version\": \"1-0-0\",\"type\": \"record\",\"name\": \"eligible\",\"namespace\": \"customer\",\"fields\":[{\"name\": \"customer_id\",\"type\": \"long\"},{\"comment\": \"Internal promotion ID\",\"name\": \"promo_id\",\"type\":\"long\"}]}"}' http://localhost:8081/subjects/customer_eligible/versions`
