@@ -1,0 +1,18 @@
+{
+    "comment": "Customer eligible for promotion",
+    "version": "1-0-0",
+    "type": "record",
+    "name": "Eligible",
+    "namespace": "customer",
+    "fields": [
+        {
+            "name": "customer_id",
+            "type": "string"
+        },
+        {
+            "comment": "Internal promotion ID",
+            "name": "promo_id",
+            "type": "string"
+        }
+    ]
+}

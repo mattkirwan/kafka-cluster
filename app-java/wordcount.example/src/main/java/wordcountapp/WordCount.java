@@ -41,7 +41,7 @@ public class WordCount {
                        return value;
                    }
                 })
-               .count(Materialized.<String, Long, KeyValueStore<Bytes, byte[]>>as("counts-store-3"))
+               .count(Materialized.<String, Long, KeyValueStore<Bytes, byte[]>>as("counts-store-4"))
                .toStream()
                .to("streams-wordcount-3-output", Produced.with(Serdes.String(), Serdes.Long()));
 
